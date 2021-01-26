@@ -1,20 +1,152 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App1.MainPage">
+             x:Class="App1.MainPage"
+             Title="Cash Register"
+             BackgroundColor="#f2f0f0"> 
+    
+    <StackLayout Padding="30,30,30,30">
+       
+        <Label x:Name="typeLabel"
+            Text="Type"
+               FontSize="22"
+               Padding="10,10,10,10"
+            />
+        <Grid Padding="10,10,10,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="70"/>
+            </Grid.ColumnDefinitions>
 
-    <StackLayout>
-        <Label x:Name="displayLabel"
-               Text="{Binding Source={x:Reference slider},
-            Path=Value,
-            StringFormat='Font Size is {0:F0}'}"/>
+            <Button
+                Text="1"
+                Grid.Row="0"
+                Grid.Column="0"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
 
-        <Slider x:Name="slider" 
-            Maximum="50" Minimum="16" Value="16" />
+            <Button
+                Text="2"
+                Grid.Row="0"
+                Grid.Column="1"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
 
-        <Label Text="Hello Xamarin"
-               FontSize="{Binding Source={x:Reference slider},
-            Path=Value}"/>
+            <Button
+                Text="3"
+                Grid.Row="0"
+                Grid.Column="2"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
+
+            <Button
+                Text="4"
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
+            
+            <Button
+                Text="5"
+                Grid.Row="1"
+                Grid.Column="1"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
+
+            <Button
+                Text="6"
+                Grid.Row="1"
+                Grid.Column="2"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
+
+            <Button
+                Text="7"
+                Grid.Row="2"
+                Grid.Column="0"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
+
+            <Button
+                Text="8"
+                Grid.Row="2"
+                Grid.Column="1"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
+
+            <Button
+                Text="9"
+                Grid.Row="2"
+                Grid.Column="2"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
+
+            <Button
+                Text="0"
+                Grid.Row="3"
+                Grid.Column="1"
+                FontSize="22"
+                BackgroundColor="White"
+                CornerRadius="25"/>
+
+            <Label 
+                Text="Total"
+                FontSize="22"
+                Grid.Row="0"
+                Grid.Column="3"/>
+
+            <Button
+                Text="Buy"
+                Grid.Row="1"
+                Grid.Column="3"
+                Grid.RowSpan="2"
+                FontSize="22"
+                BackgroundColor="Blue"
+                CornerRadius="25"
+                />
+
+
+        </Grid>
+
+        <Label
+            Text="Quantity"
+                FontSize="22"
+            />
+
+        <ListView  x:Name="listView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="White"
+                        Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding prod_name}"  />
+                                <Label Text="{Binding prod_price}"
+                                HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
 
     </StackLayout>
 
