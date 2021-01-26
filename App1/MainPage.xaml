@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+
+    <StackLayout>
+        <Label x:Name="displayLabel"
+               Text="{Binding Source={x:Reference slider},
+            Path=Value,
+            StringFormat='Font Size is {0:F0}'}"/>
+
+        <Slider x:Name="slider" 
+            Maximum="50" Minimum="16" Value="16" />
+
+        <Label Text="Hello Xamarin"
+               FontSize="{Binding Source={x:Reference slider},
+            Path=Value}"/>
+
+    </StackLayout>
+
+</ContentPage>
