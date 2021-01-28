@@ -131,14 +131,32 @@
                 FontSize="22"
             />
 
-        <ListView  x:Name="listView">
+        <!--ListView  x:Name="mylist">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="4">
+                            <Label Text="{Binding name}"/>
+                            <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="Start">
+                                <Label Text="{Binding number}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView-->
+       
+        
+        <!--ListView  x:Name="mylist">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout BackgroundColor="White"
                         Orientation="Vertical">
                             <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding prod_name}"  />
+                                <Label Text="Pants"  />
+                                <Label Text="Shoes"  />
+                                <Label Text="Hats"  />
                                 <Label Text="{Binding prod_price}"
                                 HorizontalOptions="EndAndExpand" />
                             </StackLayout>
@@ -146,7 +164,8 @@
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView-->
+        
 
 
     </StackLayout>

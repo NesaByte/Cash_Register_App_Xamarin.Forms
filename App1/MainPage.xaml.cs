@@ -13,6 +13,13 @@ namespace App1
         public MainPage()
         {
             InitializeComponent();
+
+            //List<string> names = new List<string> { "A", "B", "C" };
+            mylist.ItemSource = names;
+
+            List<Product> products = new List<Product> {
+            new Product(){ prod_name = "Hats", prod_qty = "10"};
+            }
         }
     }
 }
