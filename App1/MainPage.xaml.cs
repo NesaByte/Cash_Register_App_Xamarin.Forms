@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
 namespace App1
 {
@@ -25,8 +25,6 @@ namespace App1
                 new Product(){name = "Hats", qty="10", price ="10"},
                 new Product(){name = "Tshirts", qty="10", price ="10"},
                 new Product(){name = "Dresses", qty="24", price ="10"},
-
-
             };
             mylist.ItemsSource = products;
 
@@ -50,16 +48,19 @@ namespace App1
         }
 
 
-        void Buy_Clicked(System.Object sender, EventArgs e)
+        void Buy_Clicked(System.Object sender, System.EventArgs e)
         {
-            //set => SetValue(products[2].qty, "0");
-            num1 = products.Count;
-            for (int i = 0; i < products.Count; i++) {
-                if (products[i].name == prodName.Text) {
-                    products[i].qty = "0";
-                    
-                }
-            }
+            (mylist.SelectedItem as Product).qty = "0";
+
+            //DisplayAlert("HI THERE", "testing", "OK");
+            //    //set => SetValue(products[2].qty, "0");
+            //    //num1 = products.Count;
+            //    //for (int i = 0; i < products.Count; i++) {
+            //    //    if (products[i].name == prodName.Text) {
+            //    //        products[i].qty = "0";
+
+            //    //    }
+            //    //}
         }
     }
 }
