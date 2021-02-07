@@ -51,6 +51,9 @@ namespace App1
         void Buy_Clicked(System.Object sender, System.EventArgs e)
         {
             (mylist.SelectedItem as Product).qty = "0";
+            total.Text = "Total";
+            prodName.Text = "Type";
+            prodQty.Text = "Quantity";
 
             //DisplayAlert("HI THERE", "testing", "OK");
             //    //set => SetValue(products[2].qty, "0");
