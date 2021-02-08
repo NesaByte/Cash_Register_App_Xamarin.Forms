@@ -26,5 +26,7 @@ C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.dll
 C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\ref\App1.dll
 C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\App1.pdb
-C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\ListViewUpdate.xaml.g.cs
-C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\ListViewPage1.xaml.g.cs
+C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\ManagerPage.xaml.g.cs
+C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\Restock.xaml.g.cs
+C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\HistoryPage.xaml.g.cs
+C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\AddNewProduct.xaml.g.cs

@@ -7,26 +7,33 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
 using System.Collections.ObjectModel;
+using App1.myClasses;
 //using System.Threading.Tasks;
 
 namespace App1
 {
     public partial class MainPage : ContentPage
     {
-        ObservableCollection<Product> products;
-        int num1, num2;
+        ObservableCollection<myProduct> products;
+
+        //ObservableCollection<myHistory> history;
+        myHistory history;
+
+        int num1;
+        double num2;
         public MainPage()
         {
             InitializeComponent();
-            products = new ObservableCollection<Product>
+            products = new ObservableCollection<myProduct>
             {
-                new Product(){name = "Pants", qty="20", price ="10"},
-                new Product(){name = "Shoes", qty="50", price ="10"},
-                new Product(){name = "Hats", qty="10", price ="10"},
-                new Product(){name = "Tshirts", qty="10", price ="10"},
-                new Product(){name = "Dresses", qty="24", price ="10"},
+                new myProduct(){name = "Pants", qty="20", price ="50.7"},
+                new myProduct(){name = "Shoes", qty="50", price ="90"},
+                new myProduct(){name = "Hats", qty="10", price ="20.5"},
+                new myProduct(){name = "Tshirts", qty="10", price ="10"},
+                new myProduct(){name = "Dresses", qty="24", price ="10"},
             };
-            mylist.ItemsSource = products;
+            mylist.ItemsSource = products; 
+
 
         }
         public void Number_Clicked(object sender, EventArgs e)
@@ -38,11 +45,11 @@ namespace App1
 
         void mylist_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
         {
-            prodName.Text = (e.SelectedItem as Product).name;
-            prodQty.Text = (e.SelectedItem as Product).qty;
+            prodName.Text = (e.SelectedItem as myProduct).name;
+            prodQty.Text = (e.SelectedItem as myProduct).qty;
 
             num1 = Convert.ToInt32(prodQty.Text);
-            num2 = Convert.ToInt32((e.SelectedItem as Product).price);
+            num2 = Convert.ToDouble((e.SelectedItem as myProduct).price);
 
             total.Text = (num1 * num2).ToString();
         }
@@ -50,20 +57,22 @@ namespace App1
 
         void Buy_Clicked(System.Object sender, System.EventArgs e)
         {
-            (mylist.SelectedItem as Product).qty = "0";
+            string hn = (mylist.SelectedItem as myProduct).name;
+            string hq = (mylist.SelectedItem as myProduct).qty;
+
+            myHistory hnew = new myHistory() { hname = hn, hqty = hq, htotalprice = total.Text, hpurchasedate = "4 Feb 2021" };
+            history.Add(hnew);
+            
+            (mylist.SelectedItem as myProduct).qty = "0";
             total.Text = "Total";
             prodName.Text = "Type";
             prodQty.Text = "Quantity";
 
-            //DisplayAlert("HI THERE", "testing", "OK");
-            //    //set => SetValue(products[2].qty, "0");
-            //    //num1 = products.Count;
-            //    //for (int i = 0; i < products.Count; i++) {
-            //    //    if (products[i].name == prodName.Text) {
-            //    //        products[i].qty = "0";
-
-            //    //    }
-            //    //}
+        }
+        async void Manager_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ManagerPage());
         }
     }
+
 }

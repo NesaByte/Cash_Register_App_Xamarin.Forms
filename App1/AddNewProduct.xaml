@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.AddNewProduct"
+             BackgroundColor="#f2f0f0">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="18" CornerRadius="0">
+            <Label Text="Add New Product" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+        </Frame>
+        
+        
+
+        <StackLayout Padding="40,10,40,10">
+            <Label Text="NEW PRODUCT"/>
+            
+            <TableView >
+                <TableView.Root >
+                    <TableSection >
+                        <EntryCell x:Name="newProd" LabelColor="Black" Label="Product Name"  Placeholder="Enter Product Name"></EntryCell>
+                        <EntryCell x:Name="newPrice" LabelColor="Black" Label="Price"  Placeholder="Enter Product Price"></EntryCell>
+                        <EntryCell x:Name="newQty" LabelColor="Black" Label="Quantity"  Placeholder="Enter Product Name"></EntryCell>
+                    </TableSection>
+                </TableView.Root>
+            </TableView>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

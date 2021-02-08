@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.HistoryPage">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="18" CornerRadius="0">
+                <Label Text="History Items" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+            </Frame>
+
+            <StackLayout>
+                <ListView  x:Name="myhlist"   BackgroundColor="White">
+                    <ListView.ItemTemplate>
+                        <DataTemplate> 
+                            <TextCell Text="{Binding hname}"
+                           Detail="{Binding hqty}"
+                           TextColor="Black"
+                           DetailColor="Red" > 
+                            </TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

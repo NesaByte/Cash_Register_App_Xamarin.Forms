@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.ManagerPage"
+             NavigationPage.HasNavigationBar="True"
+             NavigationPage.HasBackButton="True">
+    <ContentPage.Content>
+
+        <RelativeLayout> 
+            <StackLayout 
+                 HorizontalOptions="Fill" VerticalOptions="Center"
+        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height, Factor=0.4}"
+        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.4}">
+                <Button Text="History" Background="pink" Clicked="History_Clicked"></Button>
+                <Button Text="Restock" Background="pink" Clicked="Restock_Clicked"></Button>
+                <Button Text="Add New Product" Background="pink" Clicked="AddNewProduct_Clicked"></Button>
+
+            </StackLayout>
+        </RelativeLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

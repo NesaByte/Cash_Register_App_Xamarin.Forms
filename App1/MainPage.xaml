@@ -12,86 +12,76 @@
             <Label Text="Cash Register App" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
         </Frame>
 
-        <StackLayout 
-            Padding="40,40,40,40" 
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.5}">
-            <Label x:Name="prodName"
-            Text="Type"
-               FontSize="22"
-               Padding="10,10,10,10"
-            />
+        <StackLayout   Padding="40,10,40,10">
 
-            <Grid Padding="10,10,10,10" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="70" />
-                <RowDefinition Height="70" />
-                <RowDefinition Height="70" />
-                <RowDefinition Height="70" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-                <ColumnDefinition Width="70"/>
-            </Grid.ColumnDefinitions>
+            <Label x:Name="prodName" Text="Type" FontSize="22"/>
 
-            <Label Text="Total" FontSize="22" Grid.Row="0" Grid.Column="3" x:Name="total"/>
-            <Button Text="1" Grid.Row="0" Grid.Column="0" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="2" Grid.Row="0" Grid.Column="1" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="3" Grid.Row="0" Grid.Column="2" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="4" Grid.Row="1" Grid.Column="0" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="5" Grid.Row="1" Grid.Column="1" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="6" Grid.Row="1" Grid.Column="2" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="7" Grid.Row="2" Grid.Column="0" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="8" Grid.Row="2" Grid.Column="1" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="9" Grid.Row="2" Grid.Column="2" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="0" Grid.Row="3" Grid.Column="1" FontSize="22" BackgroundColor="White" CornerRadius="25" Clicked="Number_Clicked"/>
-            <Button Text="Buy" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" FontSize="22" BackgroundColor="Blue" CornerRadius="25" Clicked="Buy_Clicked"/>
-        </Grid>
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
 
-        <Label Text="Quantity" FontSize="22" x:Name="prodQty"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
+
+                </Grid.ColumnDefinitions>
+                <Button Text="Manager" Grid.Row="0" Grid.Column="1" FontSize="18" BackgroundColor="Red" CornerRadius="25" Clicked="Manager_Clicked"/>
+
+            </Grid>
+
+
+
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="60" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Total" FontSize="22" Grid.Row="0" Grid.Column="3" x:Name="total"/>
+                <Button Text="1" Grid.Row="0" Grid.Column="0" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="2" Grid.Row="0" Grid.Column="1" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="3" Grid.Row="0" Grid.Column="2" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="4" Grid.Row="1" Grid.Column="0" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="5" Grid.Row="1" Grid.Column="1" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="6" Grid.Row="1" Grid.Column="2" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="7" Grid.Row="2" Grid.Column="0" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="8" Grid.Row="2" Grid.Column="1" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="9" Grid.Row="2" Grid.Column="2" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="0" Grid.Row="3" Grid.Column="1" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
+                <Button Text="Buy" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" FontSize="18" BackgroundColor="Blue" CornerRadius="20" Clicked="Buy_Clicked"/>
+            </Grid>
+
+            <Label Text="Quantity" FontSize="22" x:Name="prodQty" Padding="0,10,0,10"/>
 
             <ListView  x:Name="mylist" ItemSelected="mylist_ItemSelected" BackgroundColor="White">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout Orientation="Horizontal" Padding="4">
-                            <Label Text="{Binding name}"/>
-                            <StackLayout HorizontalOptions="EndAndExpand">
-                                <Label Text="{Binding qty}"/>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="2">
+                                <StackLayout VerticalOptions="Start" >
+                                    <Label Text="{Binding name}"/>
+                                    <Label Text="{Binding price}" TextColor="red"/>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="EndAndExpand">
+                                    <Label Text="{Binding qty}"/>
+                                </StackLayout>
+                                
                             </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
-        
-        
-       
-        
-        <!--ListView  x:Name="mylist">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout BackgroundColor="White"
-                        Orientation="Vertical">
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Pants"  />
-                                <Label Text="Shoes"  />
-                                <Label Text="Hats"  />
-                                <Label Text="{Binding prod_price}"
-                                HorizontalOptions="EndAndExpand" />
-                            </StackLayout>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView-->
-        
-
-
     </StackLayout>
 
 </ContentPage>
