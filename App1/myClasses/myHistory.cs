@@ -5,7 +5,7 @@ using System.Text;
 
 namespace App1.myClasses
 {
-    class myHistory : INotifyPropertyChanged
+    public class myHistory : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         

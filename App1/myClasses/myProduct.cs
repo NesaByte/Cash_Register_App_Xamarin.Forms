@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 
 namespace App1.myClasses
 {
-    class myProduct : INotifyPropertyChanged
+    public class myProduct : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -54,7 +55,15 @@ namespace App1.myClasses
             }
         }
 
-        public myProduct() { }
+        public myProduct()
+        {
+
+            //new myProduct() { name = "Pants", qty = "20", price = "50.7" };
+            //new myProduct() { name = "Shoes", qty = "50", price = "90" };
+            //new myProduct() { name = "Hats", qty = "10", price = "20.5" };
+            //new myProduct() { name = "Tshirts", qty = "10", price = "10" };
+            //new myProduct() { name = "Dresses", qty = "24", price = "10" };
+        }
         public myProduct(string name, string qty, string price)
         {
             this.name = name;

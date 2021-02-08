@@ -13,7 +13,7 @@ namespace App1
 {
     public partial class HistoryPage : ContentPage
     {
-        ObservableCollection<myHistory> history;
+        public ObservableCollection<myHistory> history;
 
         public HistoryPage()
         {
@@ -24,6 +24,9 @@ namespace App1
                 new myHistory(){hname = "TEST hname", hqty="20", htotalprice ="10", hpurchasedate="4 Feb 2021"}, 
             };
             myhlist.ItemsSource = history;
+
+            //myhlist.BindingContext = new myHistoryCollection(Navigation);
+
         }
     }
-}
+} 
