@@ -6,16 +6,16 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Essentials;
-using System.Collections.ObjectModel;
-using App1.myClasses;
+using System.Collections.ObjectModel; 
 
 namespace App1
 {
     public partial class MainPage : ContentPage
     {
         //private ObservableCollection<myProduct> _products;
-        //public static ObservableCollection<myProduct> products { get; set; } 
-        //public ObservableCollection<myHistory> history { get; set; }
+        //static ObservableCollection<mProduct> products;
+        //public ObservableCollection<mHistory> history { get; set; }
+        //static ObservableCollection<mHistory> history;// = new ObservableCollection<mHistory>();
 
         int num1;
         double num2;
@@ -71,18 +71,8 @@ namespace App1
 
         void Buy_Clicked(System.Object sender, System.EventArgs e)
         {
-            //if (string.IsNullOrEmpty(updatedName.Text) ||
-            //    (string.IsNullOrEmpty(updatedNumber.Text) ||
-            //    mylist.SelectedItem == null))
-            //{
             //    DisplayAlert("Error  ", "Missing Values", "OK");
-            //}
-            //else
-            //{
-            //    (mylist.SelectedItem as Contact).name = updatedName.Text;
-            //    (mylist.SelectedItem as Contact).number = updatedNumber.Text;
-            //}
-
+            
             //string hn = (mylist.SelectedItem as myProduct).name;
             //string hq = (mylist.SelectedItem as myProduct).qty;
 
@@ -99,6 +89,19 @@ namespace App1
             {
                 DisplayAlert("Error ", "You have to select an item and provide a quantity", "OK");
             } else {
+
+                var tmpprod = new mProduct() { name = "AAAAA", qty = "20", price = "50.7" };
+                ProductModel.products.Add(tmpprod);
+
+                //ObservableCollection<mHistory> history;
+                //var tmphistory = new mHistory("TEST", "20", "20", "4 Feb 2021");
+                //history.Add(tmphistory);
+
+                //ProductModel.history = mHistoryCollection.getHistory();
+                var tmphistory = new mHistory("TESTtttttt", "20", "20", "4 Feb 2021");
+                ProductModel.history.Add(tmphistory);
+
+
                 num2 = Convert.ToDouble((mylist.SelectedItem as mProduct).price);
                 double num3 = num1 * num2;
                 total.Text = num3.ToString();

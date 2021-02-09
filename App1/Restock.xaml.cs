@@ -1,5 +1,4 @@
-﻿using App1.myClasses;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +24,7 @@ namespace App1
                 DisplayAlert("Error ", "You have to select an item and provide a new quantity", "OK");
             } else {
                 (mylist.SelectedItem as mProduct).qty = newQty.Text;
+                newQty.Text = "";
             }
             
         }
