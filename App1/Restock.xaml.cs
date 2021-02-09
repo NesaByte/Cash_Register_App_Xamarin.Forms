@@ -24,7 +24,7 @@ namespace App1
             if (string.IsNullOrEmpty(newQty.Text) || mylist.SelectedItem == null) {
                 DisplayAlert("Error ", "You have to select an item and provide a new quantity", "OK");
             } else {
-                (mylist.SelectedItem as myProduct).qty = newQty.Text;
+                (mylist.SelectedItem as mProduct).qty = newQty.Text;
             }
             
         }
