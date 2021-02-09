@@ -30,5 +30,8 @@ namespace App1.myClasses
             products.Add(new myProduct() { name = "Dresses", qty = "24", price = "10.0" });
 
         }
+        //public myProductCollection() { }
     }
+
+    
 }

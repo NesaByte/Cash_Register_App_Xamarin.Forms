@@ -1,8 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:myClasses="clr-namespace:App1.myClasses"
              x:Class="App1.Restock">
-        <StackLayout Padding="40,10,40,10" >
+
+    <ContentPage.BindingContext>
+        <myClasses:myProduct/>
+    </ContentPage.BindingContext>
+    
+    
+    <StackLayout Padding="40,10,40,10" >
             <Entry x:Name="newQty" Placeholder="Enter new Quantity"/> 
             <StackLayout  Orientation="Horizontal"
                  HorizontalOptions="Center" VerticalOptions="Center"

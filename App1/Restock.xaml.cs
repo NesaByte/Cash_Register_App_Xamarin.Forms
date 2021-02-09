@@ -15,7 +15,8 @@ namespace App1
         public Restock()
         {
             InitializeComponent();
-            mylist.BindingContext = new myProductCollection(Navigation);
+            //mylist.BindingContext = new myProductCollection(Navigation);
+
         }
 
         void UpdateQty_Clicked(System.Object sender, System.EventArgs e) {

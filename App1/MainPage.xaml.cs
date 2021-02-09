@@ -35,7 +35,7 @@ namespace App1
 
             mylist.BindingContext = new myProductCollection(Navigation);
             //history = new ObservableCollection<myHistory> { };
-
+            //BindingContext = myProductCollection.;
         }
         public void Number_Clicked(object sender, EventArgs e)
         {
@@ -43,12 +43,9 @@ namespace App1
             double num = Double.Parse(digit.Text);
             prodQty.Text = prodQty.Text + ((Button)sender).Text;
 
-            if (string.IsNullOrEmpty(prodQty.Text))
-            {
+            if (string.IsNullOrEmpty(prodQty.Text)) {
                 num1 = 0;
-            }
-            else
-            {
+            } else {
                 num1 = Convert.ToInt32(prodQty.Text);
             }
 
@@ -59,11 +56,9 @@ namespace App1
             prodName.Text = (e.SelectedItem as myProduct).name;
             //prodQty.Text = (e.SelectedItem as myProduct).qty;
 
-            if (string.IsNullOrEmpty(prodQty.Text))
-            {
+            if (string.IsNullOrEmpty(prodQty.Text)) {
                 num1 = 0;
-            }
-            else { 
+            } else { 
                 num1 = Convert.ToInt32(prodQty.Text);
             }
             
