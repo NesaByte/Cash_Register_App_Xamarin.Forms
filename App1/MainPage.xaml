@@ -6,7 +6,6 @@
               NavigationPage.HasNavigationBar="True"
              BackgroundColor="#f2f0f0"> 
     
-    
     <StackLayout >
         <Frame BackgroundColor="#2196F3" Padding="18" CornerRadius="0">
             <Label Text="Cash Register App" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
@@ -46,7 +45,8 @@
                     <ColumnDefinition Width="60"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Text="" FontSize="22" Grid.Row="0" Grid.Column="3" x:Name="total"/>
+                <Label Text="Total" FontSize="22" Grid.Row="0" Grid.Column="3" x:Name="total"/>
+                
                 <Button Text="1" Grid.Row="0" Grid.Column="0" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
                 <Button Text="2" Grid.Row="0" Grid.Column="1" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
                 <Button Text="3" Grid.Row="0" Grid.Column="2" FontSize="22" BackgroundColor="White" CornerRadius="20" Clicked="Number_Clicked"/>
@@ -60,9 +60,9 @@
                 <Button Text="Buy" Grid.Row="1" Grid.Column="3" Grid.RowSpan="2" FontSize="18" BackgroundColor="Blue" CornerRadius="20" Clicked="Buy_Clicked"/>
             </Grid>
 
-            <Label Text="Quantity" FontSize="22" x:Name="prodQty" Padding="0,10,0,10"/>
+            <Label Text="" FontSize="22" x:Name="prodQty" Padding="0,10,0,10"/>
 
-            <ListView  x:Name="mylist" ItemSelected="mylist_ItemSelected"  BackgroundColor="White">
+            <ListView  x:Name="mylist" ItemSelected="mylist_ItemSelected"  ItemsSource="{Binding products}" BackgroundColor="White">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

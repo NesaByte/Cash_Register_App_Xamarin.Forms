@@ -4,8 +4,6 @@
              x:Class="App1.ManagerPage"
              NavigationPage.HasNavigationBar="True"
              NavigationPage.HasBackButton="True">
-    <ContentPage.Content>
-
         <RelativeLayout> 
             <StackLayout 
                  HorizontalOptions="Fill" VerticalOptions="Center"
@@ -17,6 +15,4 @@
 
             </StackLayout>
         </RelativeLayout>
-        
-    </ContentPage.Content>
 </ContentPage>

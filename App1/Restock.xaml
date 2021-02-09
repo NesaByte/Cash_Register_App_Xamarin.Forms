@@ -2,18 +2,17 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.Restock">
-    <ContentPage.Content>
         <StackLayout Padding="40,10,40,10" >
             <Entry x:Name="newQty" Placeholder="Enter new Quantity"/> 
             <StackLayout  Orientation="Horizontal"
                  HorizontalOptions="Center" VerticalOptions="Center"
         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height, Factor=0.4}"
         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.3}">
-                <Button Text="Restock" Background="pink" ></Button>
+                <Button Text="Restock" Background="pink" Clicked="UpdateQty_Clicked"></Button>
                 <Button Text="Cancel" Background="pink" Clicked="Cancel_Clicked" ></Button>
             </StackLayout>
 
-            <ListView  x:Name="myhlist"   BackgroundColor="White">
+            <ListView  x:Name="mylist" ItemsSource="{Binding products}"  BackgroundColor="White">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -30,5 +29,4 @@
 
 
         </StackLayout>
-    </ContentPage.Content>
 </ContentPage>
