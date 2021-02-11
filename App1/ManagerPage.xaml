@@ -3,8 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App1.ManagerPage"
              NavigationPage.HasNavigationBar="True"
-             NavigationPage.HasBackButton="True">
-        <RelativeLayout> 
+             BackgroundColor="#f2f0f0">
+    <NavigationPage.TitleView>
+        <Label Text="Cash Register App"  TextColor="White" FontSize="18"/>
+    </NavigationPage.TitleView>
+
+    <StackLayout>
+        <RelativeLayout>
             <StackLayout 
                  HorizontalOptions="Fill" VerticalOptions="Center"
         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height, Factor=0.4}"
@@ -15,4 +20,5 @@
 
             </StackLayout>
         </RelativeLayout>
+    </StackLayout>
 </ContentPage>

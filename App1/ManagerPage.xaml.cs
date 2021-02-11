@@ -18,16 +18,16 @@ namespace App1
         }
         async void History_Clicked(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushModalAsync(new HistoryPage());
+            await Navigation.PushAsync(new HistoryPage());
         }
         async void Restock_Clicked(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushModalAsync(new Restock());
+            await Navigation.PushAsync(new Restock());
         }
 
         async void AddNewProduct_Clicked(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushModalAsync(new AddNewProduct());
+            await Navigation.PushAsync(new AddNewProduct());
         }
     }
 }

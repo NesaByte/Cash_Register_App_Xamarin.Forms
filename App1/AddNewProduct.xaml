@@ -1,16 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              x:Class="App1.AddNewProduct"
-             BackgroundColor="#f2f0f0">
+             BackgroundColor="#f2f0f0" >
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="18" CornerRadius="0">
-            <Label Text="Add New Product" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
-        </Frame>
-        
-        
-
+    <NavigationPage.TitleView>
+        <Label Text="Add New Product" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Order="Primary"
+                     Text="Save"
+                     Priority="0" Clicked="Save_Clicked"  />
+        <ToolbarItem Order="Primary"
+                     Text="Cancel"
+                     Priority="1"  Clicked="Cancel_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout> 
         <StackLayout Padding="40,10,40,10">
             <Label Text="NEW PRODUCT"/>
             

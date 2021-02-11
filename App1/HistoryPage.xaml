@@ -2,17 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App1;assembly=App1"
-             x:Class="App1.HistoryPage">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Back"/>
-    </ContentPage.ToolbarItems>
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="18" CornerRadius="0">
-            <Label Text="History Items" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
-        </Frame>
+             x:Class="App1.HistoryPage"
+             NavigationPage.BackButtonTitle="Back"
+             NavigationPage.HasBackButton="True"
+             >
+
+    <NavigationPage.TitleView>
+        <Label Text="History Items" HorizontalTextAlignment="Center" TextColor="White" FontSize="22"/>
+    </NavigationPage.TitleView>
+
+    <StackLayout> 
 
         <StackLayout>
-            <ListView  x:Name="myhlist" ItemsSource="{x:Static local:ProductModel.history}" BackgroundColor="White">
+            <ListView  x:Name="myhlist" ItemsSource="{x:Static local:ProductModel.history}" ItemTapped="OnItemSelected" BackgroundColor="White">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <TextCell Text="{Binding hname}"

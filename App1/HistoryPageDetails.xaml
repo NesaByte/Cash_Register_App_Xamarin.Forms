@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.HistoryPageDetails"
+              NavigationPage.BackButtonTitle="History Items">
+
+    <NavigationPage.TitleView>
+        <Label Text="" x:Name="tit" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <RelativeLayout>
+            <StackLayout HorizontalOptions="Fill" VerticalOptions="Center"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height, Factor=0.4}"
+                         RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width, Factor=0.4}">
+                <Label Text="" x:Name="dhn"/>
+            <Label Text="" x:Name="dhq"/>
+            <Label Text="" x:Name="dht"/>
+            <Label Text="" x:Name="dhd"/>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -30,3 +30,4 @@ C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\ManagerPage.
 C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\Restock.xaml.g.cs
 C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\HistoryPage.xaml.g.cs
 C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\AddNewProduct.xaml.g.cs
+C:\Users\oyoni\source\repos\App1\App1\App1\obj\Debug\netstandard2.0\HistoryPageDetails.xaml.g.cs

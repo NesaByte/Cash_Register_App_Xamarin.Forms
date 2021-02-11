@@ -3,16 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App1;assembly=App1"
              x:Class="App1.MainPage"
-             Title="Cash Register"
-             NavigationPage.HasNavigationBar="True"
              BackgroundColor="#f2f0f0">
- 
-    
-    <StackLayout >
-        <Frame BackgroundColor="#2196F3" Padding="18" CornerRadius="0">
-            <Label Text="Cash Register App" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
-        </Frame>
 
+    <NavigationPage.TitleView>
+        <Label Text="Cash Register App" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+    </NavigationPage.TitleView>
+
+    <StackLayout >
         <StackLayout   Padding="40,10,40,10">
 
             <Label x:Name="prodName" Text="Type" FontSize="22"/>

@@ -12,20 +12,17 @@ namespace App1
 {
     public partial class HistoryPage : ContentPage
     {
-        //public ObservableCollection<mHistory> history;
-
         public HistoryPage()
         {
             InitializeComponent();
-            //history = new ObservableCollection<mHistory>
-            //{
-            //    //(string hname, string hqty, string htotalprice, string hpurchasedate)
-            //    new mHistory(){hname = "TEST hname", hqty="20", htotalprice ="10", hpurchasedate="4 Feb 2021"}, 
-            //};
-            //myhlist.ItemsSource = history;
+        } 
+        async public void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null) return;  
+            mHistory h = (mHistory)((ListView)sender).SelectedItem;
+            await Navigation.PushAsync(new HistoryPageDetails(h));
 
-            //myhlist.BindingContext = new myHistoryCollection(Navigation);
-            //ProductModel.history = mHistoryCollection.getHistory();
+            ((ListView)sender).SelectedItem = null;  
         }
     }
 } 

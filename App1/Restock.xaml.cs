@@ -14,8 +14,6 @@ namespace App1
         public Restock()
         {
             InitializeComponent();
-            //mylist.BindingContext = new myProductCollection(Navigation);
-
         }
 
         void UpdateQty_Clicked(System.Object sender, System.EventArgs e) {
@@ -26,33 +24,10 @@ namespace App1
                 (mylist.SelectedItem as mProduct).qty = newQty.Text;
                 newQty.Text = "";
             }
-            
         }
 
         async void Cancel_Clicked(System.Object sender, System.EventArgs e) {
-            await Navigation.PushModalAsync(new MainPage());
-        }
-
-        void mylist_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-        {
-            //prodName.Text = (e.SelectedItem as myProduct).name;
-            //prodQty.Text = (e.SelectedItem as myProduct).qty;
-
-            //if (string.IsNullOrEmpty(prodQty.Text))
-            //{
-            //    num1 = 0;
-            //}
-            //else
-            //{
-            //    num1 = Convert.ToInt32(prodQty.Text);
-            //}
-
-            //num2 = Convert.ToDouble((e.SelectedItem as myProduct).price);
-
-            //double num3 = num1 * num2;
-            //total.Text = num3.ToString();
-
-            //newQty;
+            await Navigation.PushAsync(new MainPage());
         }
     }
 }
