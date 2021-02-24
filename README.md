@@ -14,3 +14,6 @@ This Assignment 1 objectives are to:
 ### To run:
 1. Clone this repo by ```git clone https://github.com/NesaByte/Cash_Register_Application.git```
 2. Open Visual Studio and run the App with an emulator
+
+#### Watch Demo:
+[Click me!](https://www.youtube.com/watch?v=Edd4s5Ts1xg)
